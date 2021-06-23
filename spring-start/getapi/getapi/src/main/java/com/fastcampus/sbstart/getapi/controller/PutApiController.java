@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 public class PutApiController {
 
     @PutMapping("/put/{userId}")
-    public String put(@RequestBody PutRequestDto putRequestDto, @PathVariable String userId){
-        System.out.println("userId : "+userId);
+    public String put(@RequestBody PutRequestDto putRequestDto, @PathVariable String userId) {
+        System.out.println(putRequestDto);
         return putRequestDto.toString().toString();
     }
 }

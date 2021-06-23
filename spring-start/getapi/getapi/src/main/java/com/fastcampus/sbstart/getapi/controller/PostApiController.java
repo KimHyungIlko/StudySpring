@@ -13,16 +13,16 @@ import java.util.Map;
 public class PostApiController {
 
     @PostMapping("/post")
-    public void post(@RequestBody Map<String,String> requestData){
+    public void post(@RequestBody Map<String, String> requestData) {
 
         requestData.entrySet().forEach(stringStringEntry -> {
-            System.out.println("key : "+stringStringEntry.getKey());
-            System.out.println("value : "+stringStringEntry.getValue());
-        }); 
+            System.out.println("key : " + stringStringEntry.getKey());
+            System.out.println("value : " + stringStringEntry.getValue());
+        });
     }
 
     @PostMapping("/post1")
-    public void post1(@RequestBody PostRequestDto postRequestDto){
+    public void post1(@RequestBody PostRequestDto postRequestDto) {
 
         System.out.println(postRequestDto);
 
